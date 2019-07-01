@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-md-4">
-    <img src="" alt="" class="img-fluid">
+    <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-fluid">
   </div>
   <div class="col-md-8">
-    <h3>ddddddd</h3>
+    <h3>{{recipe.name}}</h3>
     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
       <div class="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="descirption-text">
-      descirption
+      {{recipe.description}}
     </div>
     <div class="ingredients-text">
       ingredients
