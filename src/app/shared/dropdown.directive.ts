@@ -7,5 +7,6 @@ export class DropdownDirective {
   @HostBinding('class.show') isOpen = false;
   @HostListener('click') toggelOpen() {
     this.isOpen = !this.isOpen;
+    console.log(this.isOpen);
   }
 }

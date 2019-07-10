@@ -9,7 +9,7 @@
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Recipe Manager
         </button>
-        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" appDropdown>
           <a class="dropdown-item" href="#">Dropdown link</a>
           <a class="dropdown-item" href="#">Dropdown link</a>
         </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="ingredients-text">
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}{{ingredient.amount}}</li>
+        <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}} {{ingredient.amount}}</li>
       </ul>
     </div>
   </div>
