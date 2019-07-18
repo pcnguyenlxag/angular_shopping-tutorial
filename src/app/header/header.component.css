@@ -1,3 +1,38 @@
+.navbar {
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: azure;
+}
+
+.navbar-brand {
+  background-color: whitesmoke;
+}
+
+a.navbar-brand {
+  color: #fff;
+}
+
+.navbar-collapse {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+li {
+  margin: 0 1rem;
+  background-color: whitesmoke;
+}
+
 .d-flex {
   display: flex;
   flex-direction: row;

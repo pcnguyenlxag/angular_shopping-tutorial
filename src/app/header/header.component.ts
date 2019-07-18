@@ -1,5 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import { Component, OnInit, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
+// import {MenuItem} from 'primeng/api';
 import {SelectItem} from 'primeng/api';
 
 interface City {
@@ -10,11 +10,11 @@ interface City {
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
   @Output() featureSelected = new EventEmitter<string>();
-  items: MenuItem[];
+  // items: MenuItem[];
   cities: SelectItem[];
   selectedCity: City;
 
@@ -25,10 +25,14 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.items = [
-      {label: 'Recipe', icon: 'fa fa-fw fa-bar-chart'},
-      {label: 'Shopping list', icon: 'fa fa-fw fa-calendar'},
-    ];
+    // this.items = [
+    //   {label: 'Recipe', icon: 'fa fa-fw fa-bar-chart', command: () => {
+    //     this.onSelect();
+    // }},
+    //   {label: 'Shopping list', icon: 'fa fa-fw fa-calendar', command: () => {
+    //     this.onSelect();
+    // }},
+    // ];
 
     this.cities = [
       {label: 'Select City', value: null},
