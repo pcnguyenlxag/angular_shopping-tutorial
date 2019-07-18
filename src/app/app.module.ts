@@ -2,6 +2,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +17,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { MenuModule } from 'primeng/menu';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { DropdownModule } from 'primeng/dropdown';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CardModule} from 'primeng/card';
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TabMenuModule,
     DropdownModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CardModule,
+    SplitButtonModule,
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
