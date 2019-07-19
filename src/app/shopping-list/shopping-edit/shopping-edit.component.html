@@ -1,21 +1,22 @@
-<div class="row">
-  <div class="col-md-12">
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name" #nameInput>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="amount">Amount</label>
-            <input type="number" class="form-control" id="amount" placeholder="Amount" #amountInput>
-          </div>
+<div class="ui-g">
+      <div class="ui-g-12" [ngStyle]="{'text-align': 'center'}">
+        <div class="ui-g-4">
+          <label for="name">Name</label>
+          <input type="text" id="name" pInputText #nameInput/>
+          <!-- <input type="text" class="form-control" id="name" placeholder="Name" #nameInput> -->
         </div>
-        <div class="form-row justify-content-end">
-          <button type="button" class="btn btn-success mr-2" (click)="onAddItem()">Add</button>
-          <button type="button" class="btn btn-danger mr-2">Delete</button>
-          <button type="button" class="btn btn-primary mr-2">Clear</button>
+        <div class="ui-g-4">
+          <label for="amountInput">Amount</label>
+          <!-- <label for="amount">Amount</label> -->
+          <p-spinner size="30" [(ngModel)]="amount" [min]="0" id="amountInput"></p-spinner>
+          <!-- <input type="number" class="form-control" id="amount" placeholder="Amount" #amountInput> -->
         </div>
-      </form>
-  </div>
+      </div>
+      <div class="ui-g-12 ui-md-6 ui-lg-4 align-button">
+        <button pButton type="button" icon="pi pi-check" iconPos="right" label="Add" class="ui-button-success" (click)="onAddItem()"></button>
+        <!-- <button type="button" class="btn btn-success mr-2" (click)="onAddItem()">Add</button> -->
+        <button pButton type="button" icon="pi pi-times" iconPos="right" label="Delete" class="ui-button-danger"></button>
+        <button pButton type="button" icon="pi pi-trash" iconPos="right" label="Clear"></button>
+        <!-- <button type="button" class="btn btn-primary mr-2"></button> -->
+      </div>
 </div>

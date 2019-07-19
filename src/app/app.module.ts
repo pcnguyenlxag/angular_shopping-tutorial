@@ -18,8 +18,11 @@ import { MenuModule } from 'primeng/menu';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CardModule} from 'primeng/card';
-import {SplitButtonModule} from 'primeng/splitbutton';
+import { CardModule } from 'primeng/card';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { ButtonModule } from 'primeng/button';
+import { SpinnerModule } from 'primeng/spinner';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import {SplitButtonModule} from 'primeng/splitbutton';
     BrowserAnimationsModule,
     CardModule,
     SplitButtonModule,
+    ButtonModule,
+    SpinnerModule,
+    InputTextModule,
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

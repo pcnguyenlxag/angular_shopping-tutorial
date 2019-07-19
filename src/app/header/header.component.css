@@ -3,11 +3,14 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: azure;
+  padding: 0 2rem;
 }
 
 .navbar-brand {
-  background-color: whitesmoke;
+  background-color: rgb(154, 184, 218);
+  width: 100%;
 }
 
 a.navbar-brand {
@@ -22,6 +25,7 @@ ul {
   display: flex;
   list-style: none;
   margin: 0;
+  height: 100%;
 }
 
 .mr-auto {
@@ -29,11 +33,11 @@ ul {
 }
 
 li {
-  margin: 0 1rem;
   background-color: whitesmoke;
+  width: 100px;
+  text-align: center;
 }
 
-.d-flex {
-  display: flex;
-  flex-direction: row;
+.nav-item:hover {
+  background-color: rgb(129, 144, 161);
 }
