@@ -1,3 +1,4 @@
+import { RecipeService } from './../recipe.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
@@ -14,19 +15,28 @@ export interface RecipeManager {
 })
 export class RecipeDetailComponent implements OnInit {
   recipeManagers: RecipeManager[];
-
   @Input() recipe: Recipe;
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
     this.recipeManagers = [
-      {label: 'Update', icon: 'pi pi-refresh', command: () => {
-          // this.update();
-      }},
-      {label: 'Delete', icon: 'pi pi-times', command: () => {
+      { label: 'To shopping list', icon: 'pi pi-list', command: () => {
+          this.onAddToShoppingList();
+        }
+      },
+      { label: 'Edit recipe', icon: 'pi pi-pencil', command: () => {
+        // this.delete();
+        }
+      },
+      { label: 'Delete recipe', icon: 'pi pi-times', command: () => {
           // this.delete();
-      }},
-  ];
+        }
+      },
+    ];
+  }
+
+  onAddToShoppingList() {
+    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 
 }
