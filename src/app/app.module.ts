@@ -23,6 +23,7 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { ButtonModule } from 'primeng/button';
 import { SpinnerModule } from 'primeng/spinner';
 import {InputTextModule} from 'primeng/inputtext';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {InputTextModule} from 'primeng/inputtext';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,

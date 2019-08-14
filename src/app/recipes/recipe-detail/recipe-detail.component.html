@@ -34,7 +34,7 @@
   <div class="descirption-text">
     {{recipe.description}}
   </div>
-  <p-splitButton label="Recipe Manager" icon="pi pi-file" (onClick)="save('info')" [model]="recipeManagers"></p-splitButton>
+  <p-splitButton label="Recipe Manager" icon="pi pi-file" [model]="recipeManagers"></p-splitButton>
   <div class="ingredients-text">
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}} {{ingredient.amount}}</li>

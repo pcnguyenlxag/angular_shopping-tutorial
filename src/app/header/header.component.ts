@@ -13,34 +13,21 @@ interface City {
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() featureSelected = new EventEmitter<string>();
+  // @Output() featureSelected = new EventEmitter<string>();
   // items: MenuItem[];
   cities: SelectItem[];
   selectedCity: City;
-
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
-  }
+  // onSelect(feature: string) {
+  //   this.featureSelected.emit(feature);
+  // }
 
   constructor() { }
 
   ngOnInit() {
-    // this.items = [
-    //   {label: 'Recipe', icon: 'fa fa-fw fa-bar-chart', command: () => {
-    //     this.onSelect();
-    // }},
-    //   {label: 'Shopping list', icon: 'fa fa-fw fa-calendar', command: () => {
-    //     this.onSelect();
-    // }},
-    // ];
 
     this.cities = [
-      {label: 'Select City', value: null},
-      {label: 'New York', value: {id: 1, name: 'New York', code: 'NY'}},
-      {label: 'Rome', value: {id: 2, name: 'Rome', code: 'RM'}},
-      {label: 'London', value: {id: 3, name: 'London', code: 'LDN'}},
-      {label: 'Istanbul', value: {id: 4, name: 'Istanbul', code: 'IST'}},
-      {label: 'Paris', value: {id: 5, name: 'Paris', code: 'PRS'}}
+      {label: 'Save Data', value: null},
+      {label: 'Fetch Data', value: {id: 1, name: 'New York', code: 'NY'}},
     ];
 
   }
