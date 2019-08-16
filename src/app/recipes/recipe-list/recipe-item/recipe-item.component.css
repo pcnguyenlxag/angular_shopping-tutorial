@@ -5,3 +5,7 @@
 .ui-card-body {
   margin-bottom: 1rem;
 }
+
+.active {
+  background-color: cornsilk;
+}
